@@ -48,7 +48,18 @@ function mostrarMenPromedio($array, $prom){
     PHP_EOL;
 }
 
-function minimo($array){}
+function minimo($array){
+    $longitud = count($array);
+    $pos=0;
+    $min= $array[$pos];
+    for($i=1; $i<$longitud; $i++){
+        if ($array[$i]<$min){
+            $min= $array[$i];
+            $pos= $i;
+        }
+    }    
+    return [$pos, $min];
+}
 
 $n = readline("Ingrese la cant de elementos del arreglo: ").PHP_EOL;
 
@@ -57,12 +68,14 @@ for ($i=0; $i<$n; $i++){
 }
 
 print_r($array);
-$prom = promedio($array);
+/*$prom = promedio($array);
 echo "El promedio del array es: " . $prom .PHP_EOL;
 echo var_dump(ordenado($array,0));
 echo "Los Valores que superan el promedio son: ".PHP_EOL;
 mostrarSupPromedio($array,$prom);
 echo "Los Valores que no superan el promedio son: ".PHP_EOL;
-mostrarMenPromedio($array,$prom);
+mostrarMenPromedio($array,$prom);*/
+$min = minimo($array);
+echo 'El minimo del array es: '. $min[1] . ' y la posicion de dicho elemento es: '. $min[0];
 
 ?>
