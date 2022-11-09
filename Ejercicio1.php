@@ -4,8 +4,6 @@
 que superan al promedio y su posición, verificar si los elementos del vector se hallan 
 ordenados en forma descendente, muestre el mínimo con su posición. */
 
-use function PHPSTORM_META\registerArgumentsSet;
-
 function promedio($array){
     $suma = 0;
     $cont = 0;
@@ -68,13 +66,13 @@ for ($i=0; $i<$n; $i++){
 }
 
 print_r($array);
-/*$prom = promedio($array);
+$prom = promedio($array);
 echo "El promedio del array es: " . $prom .PHP_EOL;
 echo var_dump(ordenado($array,0));
 echo "Los Valores que superan el promedio son: ".PHP_EOL;
 mostrarSupPromedio($array,$prom);
 echo "Los Valores que no superan el promedio son: ".PHP_EOL;
-mostrarMenPromedio($array,$prom);*/
+mostrarMenPromedio($array,$prom);
 $min = minimo($array);
 echo 'El minimo del array es: '. $min[1] . ' y la posicion de dicho elemento es: '. $min[0];
 
