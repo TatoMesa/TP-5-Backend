@@ -4,8 +4,6 @@
 que superan al promedio y su posición, verificar si los elementos del vector se hallan 
 ordenados en forma descendente, muestre el mínimo con su posición. */
 
-use function PHPSTORM_META\registerArgumentsSet;
-
 function promedio($array){
     $suma = 0;
     $cont = 0;
