@@ -16,21 +16,28 @@ function impar($item){
         return false;
 }
 
+function buscar($array,$item){
+    $longitud = count($array);
+    for($i=0; $i<$longitud; $i++){
+        if ($array[$i]==$item){
+            $resu[]=$i;
+        }
+    }
+    
+}
 
 function cargarVector(){
     $i =0;
     do{
         $item = readline("Ingrese un dato impar para cargar, 0 (cero) para finalizar la carga: ");
         if (impar($item)){
-            $vector[$i] = $item;
-            $i++;
-        }
-        else
+                $vector[$i] = $item;
+                $i++;
+        }else
             echo "El dato a ingresar debe ser impar" . PHP_EOL ;        
     }while ($item != 0);
     return $vector;
 } 
-
 
 $vector = cargarVector();
 print_r($vector);
