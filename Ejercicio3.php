@@ -42,14 +42,38 @@ function cargarVector(){
 $vector = cargarVector();
 print_r($vector);
 
-do{
+function menu(){
     echo " _________ Menu de Opciones _________ ". PHP_EOL;
-    echo "1. Cargar Vector ".PHP_EOL;
-    echo "2. verificar Repetidos ".PHP_EOL;
-    echo "3. Contar apariciones ".PHP_EOL;
-    echo "4. Promedio ".PHP_EOL;
-    echo "0. Salir ".PHP_EOL;
-    $opcion = readline ("Ingrese opcion: ");
+    echo " Op-1 Cargar Vector ".PHP_EOL;
+    echo " Op-2 verificar Repetidos ".PHP_EOL;
+    echo " Op-3 Contar apariciones ".PHP_EOL;
+    echo " Op-4 Promedio ".PHP_EOL;
+    echo " Op-5 Mostrar vector ".PHP_EOL;
+    echo " Op-0 Salir ".PHP_EOL;
+    return readline ("Ingrese opcion: ");
+    
+}
+
+
+
+
+do{
+    $opcion = menu();
+    switch ($opcion){
+        case 1:{
+            $vector = cargarVector();
+            break;
+        }
+        case 0:{
+            
+
+            )
+        }
+
+
+
+    }
+
 
 }while ($opcion !=0);
 
